@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+}
+
+.face {
+  box-sizing: border-box;
+  border: 1vmin dotted #000;
+  border-radius: 50%;
+  width: 80vmin;
+  height: 80vmin;
+  margin: auto;
+  display: flex;
+  position: absolute;
+  inset: 0;
+}
+
+.face__sec-arm {
+  box-sizing: border-box;
+  transform-origin: .75vmin 37vmin;
+  z-index: 2;
+  border: .75vmin solid #2c8000;
+  width: 0;
+  height: 37vmin;
+  margin-top: 2vmin;
+  animation-name: time;
+  animation-duration: 60s;
+  animation-timing-function: steps(60, end);
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  position: relative;
+  left: 38.25vmin;
+}
+
+.face__minutes-arm {
+  box-sizing: border-box;
+  transform-origin: 1.5vmin 20vmin;
+  z-index: 1;
+  border: 1.5vmin solid #0700ff;
+  width: 0;
+  height: 20vmin;
+  margin-top: 19vmin;
+  animation-name: time;
+  animation-duration: 3600s;
+  animation-timing-function: steps(60, end);
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  position: absolute;
+  right: 37.5vmin;
+}
+
+.face__axis {
+  z-index: 3;
+  background-color: #f6a603;
+  border-radius: 50%;
+  width: 5vmin;
+  height: 5vmin;
+  margin: auto;
+  position: absolute;
+  inset: 0;
+}
+
+.face--speed-up :first-child {
+  animation-duration: 10s;
+}
+
+.face--speed-up :nth-child(2) {
+  animation-duration: 600s;
+}
+
+@keyframes time {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=index.971c2ea4.css.map */
